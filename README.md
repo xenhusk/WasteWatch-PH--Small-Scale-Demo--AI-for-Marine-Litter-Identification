@@ -23,7 +23,7 @@ WasteWatch PH is a machine learning project that uses deep learning to identify 
 
 ### 1. Clone the Repository
 ```powershell
-git clone <your-repo-url>
+git clone xenhusk/WasteWatch-PH--Small-Scale-Demo--AI-for-Marine-Litter-Identification
 cd "WasteWatch PH (Small Scale Demo) AI for Marine Litter Identification"
 ```
 
