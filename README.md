@@ -50,7 +50,7 @@ python train_wastewatch_model.py
 
 ### 6. Predict Waste Type
 ```powershell
-python predict_waste_type.py <path_to_image>
+python predict_waste_type.py
 ```
 
 ## Notes
