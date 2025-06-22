@@ -152,6 +152,7 @@ plt.legend(loc='upper right')
 plt.grid(True)
 
 plt.tight_layout()
-plt.show()
+plt.savefig('training_history_plot.png')
+plt.close()
 
 print("\n--- Training complete. ---")
