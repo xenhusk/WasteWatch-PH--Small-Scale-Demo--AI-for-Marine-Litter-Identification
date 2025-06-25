@@ -2,3 +2,7 @@ tensorflow
 numpy
 matplotlib
 scipy
+opencv-python
+pandas
+Pillow
+ultralytics

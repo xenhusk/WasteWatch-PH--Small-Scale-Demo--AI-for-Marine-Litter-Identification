@@ -3,3 +3,27 @@
 /wastewatch_env
 /wastewatch2_env
 cuda-repo-wsl-ubuntu-12-5-local_12.5.0-1_amd64.deb
+# Ignore YOLO and dataset outputs
+/yolo_labels/
+/yolo_dataset/
+/runs/
+
+# Ignore model weights and checkpoints
+*.pt
+*.h5
+
+# Ignore Ultralytics cache and logs
+ultralytics*
+*.log
+
+# Ignore Jupyter and Python cache
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore original dataset folder (replace with your actual folder name if different)
+/trash_labels_anotations/

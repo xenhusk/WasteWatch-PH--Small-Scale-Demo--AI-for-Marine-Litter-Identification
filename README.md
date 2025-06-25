@@ -203,6 +203,45 @@ python train_wastewatch_model.py
 python predict_waste_type.py
 ```
 
+## YOLO Object Detection (Realtime Waste Detection)
+
+This project now supports object detection using YOLOv8 for real-time waste detection via your webcam!
+
+### How to Train YOLOv8
+
+1. Prepare your dataset (images and YOLO-format labels) in the `yolo_dataset/` folder (already organized by the provided scripts).
+2. Install Ultralytics YOLO:
+   ```bash
+   pip install ultralytics
+   ```
+3. Use the provided `data.yaml` for training:
+   ```bash
+   yolo detect train data=data.yaml model=yolov8m.pt epochs=50 imgsz=640 batch=32
+   ```
+
+### How to Run Real-Time Detection
+
+After training, run this command to use your webcam for live detection:
+```bash
+yolo detect predict model=runs/detect/train/weights/best.pt source=0
+```
+- Replace `source=0` with a video file or image folder as needed.
+
+### Outputs
+- Training runs and results are saved in the `runs/` directory (ignored by git).
+- Model weights are saved as `.pt` files in `runs/detect/train/weights/`.
+
+## Dataset
+
+The training and validation images used in this project are not included in the repository. You can download the original dataset from Kaggle:
+
+[https://www.kaggle.com/datasets/harshpanwar/aquatrash/data](https://www.kaggle.com/datasets/harshpanwar/aquatrash/data)
+
+After downloading, follow the instructions above to organize and preprocess the data for YOLO training.
+
+## .gitignore
+- The repository ignores all data, test images, virtual environments, YOLO outputs, model weights, and cache files for cleanliness and privacy.
+
 ## Troubleshooting Common Issues
 
   * **`Command 'python' not found, did you mean: command 'python3'`**: Use `python3` instead of `python` for system-level commands like `python3 -m venv`. Once the virtual environment is activated, `python` will correctly point to the virtual environment's Python.
